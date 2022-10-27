@@ -8,9 +8,7 @@ public class Lion extends Feline {
     private IFeline iFeline;
     private Lion lion;
 
-  /*  public Lion(Feline feline) {
-        this.iFeline = feline;
-    }*/
+
 
     public Lion(String sex,Feline feline) throws Exception {
 
