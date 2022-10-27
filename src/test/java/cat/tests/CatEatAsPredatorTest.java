@@ -1,6 +1,5 @@
 package cat.tests;
 
-
 import org.junit.Test;
 import com.example.Cat;
 import com.example.Feline;
@@ -9,7 +8,7 @@ import com.example.Feline;
 import static org.junit.Assert.assertEquals;
 
 
-public class CatEatAsPredator {
+public class CatEatAsPredatorTest {
 
     Feline feline = new Feline();
     Cat cat = new Cat(feline);

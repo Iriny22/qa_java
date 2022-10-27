@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class CatSoundPositive {
+public class CatSoundPositiveTest {
     Feline feline = new Feline();
     Cat cat = new Cat(feline);
 

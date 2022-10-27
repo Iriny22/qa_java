@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class LionGetKittens {
+public class LionGetKittensMockTest {
 
     @Mock
     Lion lion;
@@ -16,7 +16,7 @@ public class LionGetKittens {
     @Test
     public void lionGetKittens() {
 
-        lion.getKittens(1); // вызвали метод объекта с аргументом
-        Mockito.verify(lion).getKittens(1); // проверили, что метод вызван с этим параметром
+        lion.getKittens(2); // вызвали метод объекта с аргументом
+        Mockito.verify(lion).getKittens(2); // проверили, что метод вызван с этим параметром
     }
 }

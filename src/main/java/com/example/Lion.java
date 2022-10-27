@@ -8,11 +8,14 @@ public class Lion extends Feline {
     private IFeline iFeline;
     private Lion lion;
 
-    public Lion(Feline feline) {
+  /*  public Lion(Feline feline) {
         this.iFeline = feline;
-    }
+    }*/
 
-    public Lion(String sex) throws Exception {
+    public Lion(String sex,Feline feline) throws Exception {
+
+        this.iFeline = feline;
+
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
@@ -22,7 +25,7 @@ public class Lion extends Feline {
         }
     }
 
-  // Feline feline2 = new Feline();
+
 
 
     public int getKittens() {
@@ -35,6 +38,6 @@ public class Lion extends Feline {
 
 
     public List<String> getFood() throws Exception {
-        return lion.getFood("Хищник");
+        return iFeline.eatMeat();
     }
 }
