@@ -4,30 +4,24 @@ import java.util.List;
 
 public class LionAlex extends Lion{
 
+    public LionAlex(Feline feline) throws Exception {
 
+<span class="fc" id="L9">        super(&quot;Самец&quot;, feline);</span>
 
+<span class="fc" id="L11">    }</span>
     public List&lt;String&gt; getFriends() {
-<span class="fc" id="L10">        return List.of(&quot;Марти&quot;, &quot;Глория&quot;, &quot;Мелман&quot;);</span>
+<span class="fc" id="L13">        return List.of(&quot;Марти&quot;, &quot;Глория&quot;, &quot;Мелман&quot;);</span>
     }
 
     public String getPlaceOfLiving() {
-<span class="fc" id="L14">        return &quot;Нью-Йоркский зоопарк&quot;;</span>
+<span class="fc" id="L17">        return &quot;Нью-Йоркский зоопарк&quot;;</span>
     }
 
     @Override
     public int getKittens() {
-<span class="fc" id="L19">        return 0;</span>
+<span class="fc" id="L22">        return 0;</span>
     }
-    Feline feline;
 
-    public LionAlex(Feline feline) throws Exception {
-
-<span class="fc" id="L25">        super(&quot;Самец&quot;, feline);</span>
-<span class="fc" id="L26">        this.feline = feline;</span>
-
-
-
-<span class="fc" id="L30">        }</span>
     }
 
 

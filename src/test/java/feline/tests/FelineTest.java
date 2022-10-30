@@ -3,11 +3,9 @@ package feline.tests;
 import com.example.Feline;
 import org.junit.Test;
 
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
-public class FelineEatMeatTest {
+public class FelineTest {
     Feline feline = new Feline();
 
     @Test
@@ -19,5 +17,11 @@ public class FelineEatMeatTest {
             throw new RuntimeException(e);
         }
 
+    }
+
+    @Test
+    public void felineGetFamilyTest(){
+        String actual = feline.getFamily();
+        assertEquals("Кошачьи",actual);
     }
 }

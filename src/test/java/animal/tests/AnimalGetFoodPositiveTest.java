@@ -1,8 +1,6 @@
 package animal.tests;
 
 import com.example.Animal;
-import com.example.Lion;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,12 +10,12 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class AnimalGetFoodTest {
+public class AnimalGetFoodPositiveTest {
 
     private final String kindAnimal;
     private final String food;
 
-    public AnimalGetFoodTest(String kindAnimal, String food) {
+    public AnimalGetFoodPositiveTest(String kindAnimal, String food) {
         this.kindAnimal = kindAnimal;
         this.food = food;
     }
@@ -31,14 +29,10 @@ public class AnimalGetFoodTest {
     }
 
     @Test
-    public void animalGetFoodTest() {
-        Animal animal = new Animal();
-
-        try {
+    public void animalGetFoodTest() throws Exception {
+            Animal animal = new Animal();
             assertEquals(food,animal.getFood(kindAnimal).toString());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+
     }
 
 }
