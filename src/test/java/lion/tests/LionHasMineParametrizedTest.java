@@ -33,7 +33,7 @@ public class LionHasMineParametrizedTest {
     public void lionHasMineTest() throws Exception
 
     {
-        Feline feline = new Feline();
+
         Lion lion = new Lion(sex,feline);
         assertEquals(result, lion.doesHaveMane());
 

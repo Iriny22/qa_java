@@ -23,28 +23,22 @@ public class LionMockTest {
 
     @Test
     public void lionGetKittenTestPositive() throws Exception {
-        {
-            String sex = "Самец";
-            Feline feline = new Feline();
-            lion = new Lion(sex, feline);
-            assertEquals(1, lion.getKittens());
-        }
-    }
 
-    @Test
-    public void lionGetKittens() throws Exception {
+        String sex = "Самец";
+        lion = new Lion(sex, feline);
+        Mockito.when(feline.getKittens()).thenReturn(1);
+        assertEquals(1, lion.getKittens());
 
-        String sex = "Самка";
-        Lion lion = new Lion(sex,feline);
-        assertEquals(2,lion.getKittens(2));
     }
 
     @Test
     public void lionUnknownAnimalTest() {
+
         Exception exception = Assert.assertThrows(Exception.class, () -> {
             Lion lion = new Lion("неизвестный",feline);
         });
         assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
+
     }
 
 
@@ -54,8 +48,8 @@ public class LionMockTest {
         String sex = "Самка";
         Lion lion = new Lion(sex,feline);
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные, Птицы, Рыба"));
-        String actual = lion.getFood().toString();
-        assertEquals("[Животные, Птицы, Рыба]", actual);
+        List<String> actual = lion.getFood();
+        assertEquals(List.of("Животные, Птицы, Рыба"), actual);
 
     }
 
