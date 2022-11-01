@@ -6,7 +6,6 @@ public class Lion {
 
     boolean hasMane;
     private Feline feline;
-    private Lion lion;
 
 
 
